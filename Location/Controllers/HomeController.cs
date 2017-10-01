@@ -34,6 +34,7 @@ namespace Location.Controllers
                 var b = 0;
                 var abc = 1234;
                 var b = 0;
+                var k=0;
 
                 var b = "working on thirdBranch";
 
