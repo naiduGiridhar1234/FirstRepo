@@ -26,28 +26,18 @@ namespace Location.Controllers
 
 
             {
-              //  var resp = client.DownloadData(url);
-              //  byte[] by = resp;
-              //  string str = System.Text.Encoding.ASCII.GetString(resp);
-
+             
                 var response = client.DownloadData(url);
                 var b = 0;
                 var abc = 1234;
-                var b = 0;
-
-                var b = "working on thirdBranch";
-
                 var response1 = Encoding.Default.GetString(response);
                 JavaScriptSerializer oJS = new JavaScriptSerializer();
                 //RootObject oRootObject = new RootObject();
                 var oRootObject = oJS.Deserialize<RootObject>(response1);
                 var _country = oRootObject.data.country;
-
-
-
                 var _currency = oRootObject.data.timezone.currency_alpha_code;
                 var ip = oRootObject.data.ip;
-            
+                var n = "First";          
                 return View(oRootObject);
             }
         }
