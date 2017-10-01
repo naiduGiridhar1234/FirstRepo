@@ -32,6 +32,7 @@ namespace Location.Controllers
 
                 var response = client.DownloadData(url);
                 var b = 0;
+                var abc = 1234;
                 var response1 = Encoding.Default.GetString(response);
                 JavaScriptSerializer oJS = new JavaScriptSerializer();
                 //RootObject oRootObject = new RootObject();
