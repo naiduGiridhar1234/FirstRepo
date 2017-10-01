@@ -22,7 +22,7 @@ namespace Location.Controllers
 
             using (var client = new System.Net.WebClient())
             {
-             
+             var abc="FromMAster";
                 var response = client.DownloadData(url);
 
                 var response1 = Encoding.Default.GetString(response);
