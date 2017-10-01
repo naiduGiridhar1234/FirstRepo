@@ -24,10 +24,14 @@ namespace Location.Controllers
             {
              
                 var response = client.DownloadData(url);
+
                 var response1 = Encoding.Default.GetString(response);
                 JavaScriptSerializer oJS = new JavaScriptSerializer();
                 var oRootObject = oJS.Deserialize<RootObject>(response1);
                 var _country = oRootObject.data.country;
+
+
+
                 var _currency = oRootObject.data.timezone.currency_alpha_code;
                 var ip = oRootObject.data.ip;       
                 return View(oRootObject);
